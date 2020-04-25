@@ -4,7 +4,7 @@ var remainingLabel = document.querySelector("#remaining-guesses");
 var attemptsLabel = document.querySelector("#attempts");
 
 //**This offers a wordbank of potential answers */
-var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "lois", "meg", "peter", "cleveland"];
+var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "lois", "meg", "peter", "cleveland", "joe", "chris"];
 
 //**This sets the total amount of attempts allowed and creates an array to record the numbers */
 var attempts = []
@@ -24,7 +24,7 @@ function updateLabels() {
 }
 function updateBlanks() {
     var blanks = []
-    // Go through each letter in wordToGuess
+// Go through each letter in nameToGuess
     for(var letter of wordToGuess) {
         if(attempts.includes(letter)) {
             blanks.push(letter)
@@ -46,7 +46,7 @@ document.addEventListener("keypress", function(e) {
     }
     // Decrease attempts by one when key pressed
     updateLabels();
-    if(remainingAttempts == 1) {
+    if(remainingAttempts == 0) {
         alert("Game Over!")
         window.location.reload(true);
     }
