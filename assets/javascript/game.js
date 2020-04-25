@@ -4,11 +4,11 @@ var remainingLabel = document.querySelector("#remaining-guesses");
 var attemptsLabel = document.querySelector("#attempts");
 
 //**This offers a wordbank of potential answers */
-var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "Lois", "Meg", "peter", "cleveland"];
+var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "lois", "meg", "peter", "cleveland"];
 
 //**This sets the total amount of attempts allowed and creates an array to record the numbers */
 var attempts = []
-var remainingAttempts = 10;
+var remainingAttempts = 8;
 // Main Functionality Starts
 var wordToGuess = getWord();
 updateLabels()
@@ -46,7 +46,7 @@ document.addEventListener("keypress", function(e) {
     }
     // Decrease attempts by one when key pressed
     updateLabels();
-    if(remainingAttempts == 0) {
+    if(remainingAttempts == 1) {
         alert("Game Over!")
         window.location.reload(true);
     }
