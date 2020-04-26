@@ -4,7 +4,7 @@ var remainingLabel = document.querySelector("#remaining-guesses");
 var attemptsLabel = document.querySelector("#attempts");
 
 //**This offers a wordbank of potential answers */
-var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "lois", "meg", "peter", "cleveland", "joe", "chris"];
+var wordBank = ["stewie", "quagmire", "brian", "herbertthepervert", "lois", "meg", "peter", "cleveland", "joe", "chris", "woody"];
 
 //**This sets the total amount of attempts allowed and creates an array to record the numbers */
 var attempts = []
